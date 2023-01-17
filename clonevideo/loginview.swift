@@ -13,8 +13,8 @@ struct loginview: View {
     @State private var password = ""
     var body: some View {
         NavigationView {
-            VStack(spacing :20){
- 
+            VStack(spacing :20)
+            {
                 TextField("Email",text:$email)
                     .foregroundColor(.black)
                     .bold()
@@ -27,7 +27,6 @@ struct loginview: View {
                 Rectangle()
                     .frame(width: 350,height:1)
                     .foregroundColor(.black)
-                
                 
                 Button{
                     register()
@@ -50,21 +49,11 @@ struct loginview: View {
                 }
                 
             }
-            
             .navigationTitle("BITS-Course-Viewer")
             .padding()
-            
-            
-            
-            
-        }
-    
-            
-
-            
-        }
-    
-    
+            }
+}
+//firebase functons
 func register() {
     Auth.auth().createUser(withEmail: email, password: password)
     { result, error in
@@ -72,7 +61,6 @@ func register() {
             
             print(error!.localizedDescription)
         }}}
-    
     func login(){
         Auth.auth().signIn(withEmail: email, password: password){
             result,error in

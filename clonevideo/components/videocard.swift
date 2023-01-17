@@ -9,40 +9,26 @@ import SwiftUI
 
 struct videocard: View {
     var video : ResponseBody.Video
+   
     var body: some View {
+        var newurl = URL(string: video.image)
         ZStack {
-            ZStack(alignment:.topLeading){
-                AsyncImage(url: URL(string: video.image)){
+            ZStack(alignment:.bottomTrailing){
+                AsyncImage(url: newurl){
                     image in image.resizable()
                         .frame(width: 380, height: 150)
-                        .cornerRadius (50)
+                        .cornerRadius (250)
                 } placeholder: {
                     Rectangle()
                         .foregroundColor(.gray.opacity(0.3))
-                        .frame(width:380 , height :150)
-                        .cornerRadius(50)
-                    
-                }
-                VStack(alignment: .leading){
-                    Text("\(video.duration) sec")
-                        .font(.caption).bold()
-                        .multilineTextAlignment(.leading)
-                    Text("\(video.user.name)")
-                        .font(.caption).bold().italic()
-                        .multilineTextAlignment(.leading)
-                }
-                .foregroundColor(Color("AccentColor"))
-                .padding()
-                       
+}
             }
             
-            
             Image(systemName: "play.fill")
-                .foregroundColor(.white)
-                .font(.title)
+                .foregroundColor(.gray)
                 .padding()
                 .background(.ultraThinMaterial)
-                .cornerRadius(80)
+                .cornerRadius(200)
             
         }
     }

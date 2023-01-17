@@ -17,7 +17,6 @@ struct videoview: View {
             .onAppear{
                 if let link = video.videoFiles.first?.link {
                     player = AVPlayer (url: URL(string: link)!)
-                    player.play()
                 }
             }
     }
