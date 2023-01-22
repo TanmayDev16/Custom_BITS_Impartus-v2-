@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110A95B1297C392D00FCF568 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110A95B0297C392D00FCF568 /* HomeView.swift */; };
 		117292462964255600F16E95 /* clonevideoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117292452964255600F16E95 /* clonevideoApp.swift */; };
 		117292482964255600F16E95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117292472964255600F16E95 /* ContentView.swift */; };
 		1172924A2964255900F16E95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117292492964255900F16E95 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		110A95B0297C392D00FCF568 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		117292422964255600F16E95 /* clonevideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clonevideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117292452964255600F16E95 /* clonevideoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clonevideoApp.swift; sourceTree = "<group>"; };
 		117292472964255600F16E95 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,7 +38,7 @@
 		117292612964605F00F16E95 /* modeldata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modeldata.swift; sourceTree = "<group>"; };
 		11C6522229654B67003FD729 /* videoview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoview.swift; sourceTree = "<group>"; };
 		11C652242965A1FF003FD729 /* loginview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginview.swift; sourceTree = "<group>"; };
-		11C6522B2965AABF003FD729 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		11C6522B2965AABF003FD729 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "/Users/tanmay/Desktop/BITS-PILANI CSE/ios dev/clonevideo/clonevideo/GoogleService-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				117292452964255600F16E95 /* clonevideoApp.swift */,
 				117292472964255600F16E95 /* ContentView.swift */,
+				110A95B0297C392D00FCF568 /* HomeView.swift */,
 				11C652242965A1FF003FD729 /* loginview.swift */,
 				1172925929642A5400F16E95 /* videomanager.swift */,
 				1172925F29645FC800F16E95 /* videodata.json */,
@@ -117,6 +120,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				110A95AF297C34A500FCF568 /* PBXTargetDependency */,
+				110A95AD297C349D00FCF568 /* PBXTargetDependency */,
 			);
 			name = clonevideo;
 			packageProductDependencies = (
@@ -182,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				110A95B1297C392D00FCF568 /* HomeView.swift in Sources */,
 				117292582964294E00F16E95 /* querytag.swift in Sources */,
 				117292482964255600F16E95 /* ContentView.swift in Sources */,
 				1172925E2964569A00F16E95 /* videocard.swift in Sources */,
@@ -194,6 +200,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		110A95AD297C349D00FCF568 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 110A95AC297C349D00FCF568 /* FirebaseAuth */;
+		};
+		110A95AF297C34A500FCF568 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 110A95AE297C34A500FCF568 /* FirebaseFirestore */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1172924E2964255900F16E95 /* Debug */ = {
@@ -403,6 +420,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		110A95AC297C349D00FCF568 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11C652262965AA0D003FD729 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		110A95AE297C34A500FCF568 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11C652262965AA0D003FD729 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		11C652272965AA0D003FD729 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 11C652262965AA0D003FD729 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

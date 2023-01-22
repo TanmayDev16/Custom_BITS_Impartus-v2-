@@ -13,44 +13,65 @@ struct loginview: View {
     @State private var password = ""
     var body: some View {
         NavigationView {
-            VStack(spacing :20)
-            {
-                TextField("Email",text:$email)
-                    .foregroundColor(.black)
-                    .bold()
-                Rectangle()
-                    .frame(width: 350,height:1)
-                    .foregroundColor(.black)
-                SecureField("Password",text:$password)
-                    .foregroundColor(.black)
-                    .bold()
-                Rectangle()
-                    .frame(width: 350,height:1)
-                    .foregroundColor(.black)
+            ZStack {
+                AngularGradient (gradient: Gradient (colors: [.red,.yellow,.green,.blue,.purple]), center: .center)
+                    .edgesIgnoringSafeArea(.all)
                 
-                Button{
-                    register()
-                } label:{
-                    NavigationLink(destination: ContentView()){
-                        Text("Sign UP")
-                            .bold()
-                            .frame(width:200,height:40)
-                            .foregroundColor(.black)
+                VStack(spacing :20)
+                {
+                    TextField("Email",text:$email)
+                        .foregroundColor(.black)
+                        .bold()
+                    Rectangle()
+                        .frame(width: 350,height:1)
+                        .foregroundColor(.black)
+                    SecureField("Password",text:$password)
+                        .foregroundColor(.black)
+                        .bold()
+                    Rectangle()
+                        .frame(width: 350,height:1)
+                        .foregroundColor(.black)
+                    
+                    Button{
+                        if email == "tanmay" && password == "123"{
+                            register()
+                        }
+                        else{
+                            print("error")
+                        }
+                    } label:{
+                        if email.lowercased() == "tanmay" && password == "123"{
+                            NavigationLink(destination: HomeView()){
+                                Text("Sign UP")
+                                    .bold()
+                                    .frame(width:200,height:40)
+                                    .foregroundColor(.black)
+                            }
+                        }
+                            else{
+                                NavigationLink(destination: ContentView()){
+                                    Text("Sign UP")
+                                        .bold()
+                                        .frame(width:200,height:40)
+                                        .foregroundColor(.black)
+                            }
+                        }
                     }
+                    
+                    Button{
+                        login()
+                    } label:{
+                        Text("Already have an account? Login")
+                            
+                            .frame(width:200,height:40)
+                            .foregroundColor(.blue)
+                    }
+                    
                 }
-                
-                Button{
-                    login()
-                } label:{
-                    Text("Already have an account? Login")
-                        
-                        .frame(width:200,height:40)
-                        .foregroundColor(.blue)
-                }
-                
-            }
-            .navigationTitle("BITS-Course-Viewer")
+                .navigationTitle("BITS-Course-Viewer")
             .padding()
+            .padding()
+            }
             }
 }
 //firebase functons

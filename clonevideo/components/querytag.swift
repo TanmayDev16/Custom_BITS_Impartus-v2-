@@ -12,16 +12,20 @@ struct querytag: View {
     var desc: String = "Components"
     var clicked: Bool
     var body: some View {
-        Text(query.rawValue)
-            .font (.caption)
-            .foregroundColor(clicked ? Color(.darkGray) : .gray)
-            .padding()
-            .background(Color(.lightGray))
+        VStack{
+            Text(query.rawValue)
+                .font (.caption)
+                .foregroundColor(clicked ? Color(.darkGray) : .gray)
+                .padding()
+                .background(Color(.lightGray))
+            //            .frame(height:400)
+        }
     }
 }
 
 struct querytag_Previews: PreviewProvider {
     static var previews: some View {
         querytag(query: Query.car, clicked: true)
+//            .frame(height : 3)
     }
 }
