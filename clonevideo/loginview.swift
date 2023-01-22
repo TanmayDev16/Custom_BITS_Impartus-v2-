@@ -14,8 +14,9 @@ struct loginview: View {
     var body: some View {
         NavigationView {
             ZStack {
-                AngularGradient (gradient: Gradient (colors: [.red,.yellow,.green,.blue,.purple]), center: .center)
-                    .edgesIgnoringSafeArea(.all)
+                RadialGradient(gradient: Gradient(colors: [.gray,.brown]), center: .center,
+                startRadius: 20, endRadius: 200)
+                .edgesIgnoringSafeArea(.all)
                 
                 VStack(spacing :20)
                 {

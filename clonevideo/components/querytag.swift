@@ -15,7 +15,7 @@ struct querytag: View {
         VStack{
             Text(query.rawValue)
                 .font (.caption)
-                .foregroundColor(clicked ? Color(.darkGray) : .gray)
+                .foregroundColor(clicked ? Color(.black) : .white)
                 .padding()
                 .background(Color(.lightGray))
             //            .frame(height:400)
